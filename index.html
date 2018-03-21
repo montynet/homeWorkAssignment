@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/main.css" />
+    <title>MortyApp</title>
+</head>
+<body>
+<div class="container">
+    <div class="col-md-6">
+        <h1>Morty App</h1>
+        <div class="row">
+            <p id="code" class="code">
+                <strong>Build the winners!</strong>
+            </p>
+        </div>
+
+        <div id="winner-div" class="row form-inline">
+            <input id="user-input" class="form-control" type="text" />
+            <button class="btn btn-primary" onclick="mortyApp.submitStrings()">Submit Number Strings</button>
+        </div>
+
+        <div id="replay-div" class="row" style="display:none">
+            <button class="btn btn-primary" onclick="window.location.reload()">Enter More?</button>
+        </div>
+
+        <div class="row">
+            <p id="message" class="message"></p>
+        </div>
+
+        <div class="row" id="results">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Purpose:</h2>
+        <p class="lead">Help uncle Morty identify potential lotto picks based on his newspaper method.</p>
+
+        <h2>Rules:</h2>
+        <ul>
+            <li>Each number(s) string needs to be separated by a comma</li>
+            <li>Numbers may be used more than once!</li>
+            <li>A number string is a potential pick if it's 7 unique numbers between 1 and 59. Digits must be used in order, and every digit must be used exactly once.</li>
+        </ul>
+    </div>
+</div>
+<script src="assets/main.js"></script>
+</body>
+</html>
